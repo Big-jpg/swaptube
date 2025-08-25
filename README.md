@@ -88,7 +88,7 @@ git clone https://github.com/your-org/swaptube.git
 cd swaptube
 
 # 2. Run the installer script (Ubuntu/Debian only)
-bash <(curl -s https://raw.githubusercontent.com/your-org/swaptube/main/install.sh)
+bash <(curl -s https://raw.githubusercontent.com/your-org/swaptube/master/install.sh)
 
 # 3. Try a demo project (e.g. Klotski)
 ./go.sh Klotski 640 360
