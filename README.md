@@ -78,3 +78,30 @@ The data structure that a single frame is rendered as a function of has three pa
 - **State**: State can be thought of as any numerical information used by the Scene to render a particular frame. This controls things such as the opacity of certain objects, or, following the Mandelbrot example, the zoom level of the Mandelbrot set. All scenes have a StateManager, and when the user whishes to modify the scene's state, they can do so by calling functions on the StateManager. Usually these will be `set` and `transition` function calls. Since State uniquely contains numerical information, swaptube will handle all the clean transitions of state.
 - **Data**: Data is the non-numerical stateful information which is remembered by the Scene. A good example is the LambdaScene, which draws a Tromp Lambda Diagram, and stores as data that particular lambda expression. This type of information is non-numerical, and cannot be naively interpolated for a transition, so it must be kept in a DataObject with an interface defined in the Scene and DataObject.
 
+
+⚡ Quick Start (Ubuntu)
+
+For impatient users who just want to see SwapTube in action:
+```bash
+# 1. Clone repo
+git clone https://github.com/your-org/swaptube.git
+cd swaptube
+
+# 2. Run the installer script (Ubuntu/Debian only)
+bash <(curl -s https://raw.githubusercontent.com/your-org/swaptube/main/install.sh)
+
+# 3. Try a demo project (e.g. Klotski)
+./go.sh Klotski 640 360
+./play.sh Klotski vlc
+```
+
+This will:
+
+Install all required dependencies (cmake, ffmpeg, gnuplot, GLM, Cairo, RSVG, GLib, Eigen3, libpng).
+
+Fetch and build MicroTeX in ../MicroTeX-master/.
+
+Build SwapTube with CMake.
+
+Run a sample project (Klotski demo).
+
